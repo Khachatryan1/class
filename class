@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class Building {
+	public:
+	int height;
+	int number_of_doors;
+	char adress[50];
+	char colour[20];
+	
+	void address() {
+		cout << "введите адрес-->";
+		cin >> adress;
+		cout << "адрес->" << adress << endl;
+	}
+	void color() {
+		cout << "введите цвет-->";
+		cin >> colour;
+		 cout << "цвет->" << colour << endl;
+	}
+	void print(){
+		cout << "высота->" << height << endl;
+		cout << "количество дверей->" << number_of_doors << endl;
+		address();
+		color();
+	}
+
+};
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	Building house;
+	house.height = 30;
+	house.number_of_doors = 10;
+	house.print();
+	return 0;
+}
